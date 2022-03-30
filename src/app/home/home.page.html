@@ -80,22 +80,16 @@
 
       <!-- 6- ion-datetime -->
       <ion-item>
-        <ion-label>Fecha</ion-label>
-        <ion-text *ngIf="dateValue">{{ dateValue }}</ion-text>
+        <ion-label>Datetime</ion-label>
         <ion-button slot="end" id="open-date-input">
           <ion-icon icon="calendar-outline"></ion-icon>
         </ion-button>
         <ion-popover trigger="open-date-input" show-backdrop="false">
           <ng-template>
-            <ion-datetime
-              #popoverDatetime
-              presentation="date"
-              [value]="dateValue2"
-              (ionChange)="dateValue = formatDate(popoverDatetime.value)"
-              [(ngModel)]="fecha">
+            <ion-datetime>
               <ion-buttons slot="buttons">
-                <ion-button (click)="confirm()">Aceptar</ion-button>
-                <ion-button (click)="reset()">Restaurar</ion-button>
+                <ion-button>Aceptar</ion-button>
+                <ion-button>Restaurar</ion-button>
               </ion-buttons>
             </ion-datetime>
           </ng-template>
